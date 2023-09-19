@@ -1,10 +1,13 @@
+from datetime import date
+
 class Movie:
     nextID = 1000
-    def __init__(self, name: str, director: str, type: str, duration: int) -> None:
+    def __init__(self, name: str, langauge: str, genre: str, releaseDate: date, duration: int) -> None:
         self._movieName = name
-        self._movieDirector = director
-        self._movieType = type
-        self._movieDuration = duration
+        self._lang = langauge
+        self._genre = genre
+        self._releaseDate = releaseDate
+        self._durationMin = duration
         self._movieID = Movie.nextID
         Movie.nextID += 1
 
@@ -17,16 +20,20 @@ class Movie:
         return self._movieName
 
     @property
-    def movieDirector(self):
-        return self._movieDirector
+    def lang(self):
+        return self._lang
     
     @property
-    def movieType(self):
-        return self._movieType
+    def genre(self):
+        return self._genre
     
     @property
-    def movieDuration(self):
-        return self._movieDuration
+    def releaseDate(self):
+        return self._releaseDate
+    
+    @property
+    def duration(self):
+        return self._durationMin
     
     @property
     def movieID(self):
