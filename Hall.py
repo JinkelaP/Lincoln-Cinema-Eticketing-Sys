@@ -1,31 +1,31 @@
 class Hall:
     def __init__(self, id: int, capacity: int) -> None:
-        self._hallNumber = id
-        self._halCapacity = capacity
-        self._isOccupied = None
-        self._moviePlaying = ''
+        self.__hallNumber = id
+        self.__halCapacity = capacity
+        self.__isOccupied = None
+        self.__moviePlaying = ''
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f'Hall {self._hallNumber}. Max {self._halCapacity} people.'
     
     # getter and setter needed
     @property
     def hallNumber(self) -> int:
-        return self._hallNumber
+        return self.__hallNumber
 
     @property
     def halCapacity(self) -> int:
-        return self._halCapacity
+        return self.__halCapacity
     
     @property
     def isOccupied(self) -> bool:
-        return self._isOccupied
+        return self.__isOccupied
     
     @property
     def moviePlaying(self) -> str:
-        return self._moviePlaying
+        return self.__moviePlaying
     
     @isOccupied.setter
     def isOccupied(self, occupy: bool)-> None:
-        self._isOccupied = occupy
+        self.__isOccupied = occupy
 
