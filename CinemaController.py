@@ -51,11 +51,48 @@ class Cinema:
     
     def movieSchedule(self, movie: Movie) -> list:
         result = []
+        for i in self.allScreening:
+            if i.movieID == movie.movieID:
+                result.append(i)
 
+        if result == []:
+            return result
+        else:
+            return result.sort(key = lambda screening: screening.dateT, reverse = True)
+        
+    def checkSeatAvailability(self,screening: Screening) -> list:
+        return screening.hallSeat
+        
+    def makeBooking(self, screening: Screening, user: Customer, seatID: str, paymentType: str, price: Decimal, coupon=None) -> str:
+        # create the ticket + put it in user's list + mark unavailable in screening
 
+        newTicket = Ticket(user.userID, Screening.screeningID, datetime.now, seatID, paymentType, price)
+        if coupon != None:
+            if coupon in user.coupon:
+                user.removeCoupon(coupon)
+        
+        user.addTicket(newTicket)
+        screening.markSeatFalse(seatID)
+        msg = f'You have successfully purchased a ticket! No. {newTicket.ticketID}'
+        user.userMsgAdd(msg)
+        return msg
+
+    def removeTicket(self, user: Customer, ticket: Ticket) -> str:
+        for i in user.coupon:
+            if i == ticket:
+                user.removeTicket(ticket)
+                break
+        
+        msg = f'You have successfully cancelled a ticket!'
+        user.userMsgAdd(msg)
+        return msg
+
+    def addMovie(self, name: str, langauge: str, genre: str, releaseDate: date, duration: int) -> str:
+        newMovie = Movie(name, langauge, genre, releaseDate, duration)
+        self.allMovie.append(newMovie)
+        msg = f'You have successfully added a movie!'
+        return msg
     
+    def addScreening(self, movieID: int, dateT: datetime, hallID: int, hallSeat: list) -> str:
+        # validate datetime conflicts, generate seats
 
-
-
-
-    

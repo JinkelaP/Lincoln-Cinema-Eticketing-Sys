@@ -1,4 +1,6 @@
 from abc import ABC, abstractmethod
+from Ticket import Ticket
+from Coupon import Coupon
 
 class User(ABC):
     nextID = 10
@@ -38,8 +40,7 @@ class User(ABC):
     def userPasswordSet(self, psw: str) -> None:
         self._userPassword = psw
 
-    @userMsg.setter
-    def userMsgSet(self, msg: str) -> None:
+    def userMsgAdd(self, msg: str) -> None:
         self._userMsg.append(msg)
 
 class Customer(User):
@@ -55,6 +56,22 @@ class Customer(User):
     @property
     def coupon(self) -> list:
         return self.__coupon
+    
+    def addTicket(self, ticket: Ticket) -> None:
+        self.__ticket.append(ticket)
+    
+    def removeTicket(self, ticket: Ticket) -> None:
+        for i in self.__ticket:
+            if i == ticket:
+                i.valid = False
+
+    def addCoupon(self, coupon: Coupon) -> None:
+        self.__coupon.append(coupon)
+
+    def removeCoupon(self, coupon: Coupon) -> None:
+        for i in self.__coupon:
+            if i == coupon:
+                i.valid = False
                                                                  
 
 class Staff(User):
