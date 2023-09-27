@@ -30,7 +30,6 @@ class Cinema:
         self.allScreening = []
         self.loggedin = None
         self.loggedUser = None
-
     def login(self, userName: str, psw: str, userType: int) -> str:
         """! login function for the system. Any reasons of failed login will return the same msg.
         @param userName the username.
