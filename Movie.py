@@ -46,5 +46,5 @@ class Movie:
         return self.__movieID
     
     @screening.setter
-    def screeningSet(self, screening: list) -> None:
+    def screening(self, screening: list) -> None:
         self.__screening.append(screening)

@@ -3,11 +3,13 @@ from Seat import Seat
 
 class Screening:
     nextID = 100000
-    def __init__(self, movieID: int, dateT: datetime, hallID: int, hallSeat: list) -> None:
+    def __init__(self, movieID: int, dateT: datetime, dateTEnd: datetime, hallID: int, hallSeat: list) -> None:
         self.__movieID = movieID
         self.__dateT = dateT
+        self.__dateTEnd = dateTEnd
         self.__hallID = hallID
         self.__hallSeat = []
+        self.__valid = True
 
         self.__screeningID = Screening.nextID
         Screening.nextID += 1
@@ -15,13 +17,12 @@ class Screening:
     def __str__(self) -> str:
         return str(self.__movieID) + " " + self.__dateT.strftime("%m-%d-%Y, %H:%M")
     
-    def addSeat(self, seat: Seat) -> None:
-        self.__hallSeat.append(seat)
 
-    def markSeatFalse(self, seatID: str):
+    def markSeatFalse(self, seatID: str, userID: int):
         for i in self.__hallSeat:
             if i.seatID == seatID:
                 i.seated(False)
+                i.userID = userID
                 break
 
 
@@ -40,11 +41,23 @@ class Screening:
         return self.__dateT
     
     @property
+    def dateTEnd(self) -> datetime:
+        return self.__dateTEnd
+    
+    @property
     def hallID(self) -> int:
         return self.__hallID
     
     @property
     def hallSeat(self) -> list:
         return self.__hallSeat
+    
+    @property
+    def valid(self) -> bool:
+        return self.__valid
+    
+    @valid.setter
+    def valid(self, valid: bool) -> None:
+        self.__valid = valid
 
     

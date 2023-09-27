@@ -33,11 +33,11 @@ class User(ABC):
         return self._userMsg
     
     @username.setter
-    def usernameSet(self, name: str) -> None:
+    def username(self, name: str) -> None:
         self._username = name
 
     @userPassword.setter
-    def userPasswordSet(self, psw: str) -> None:
+    def userPassword(self, psw: str) -> None:
         self._userPassword = psw
 
     def userMsgAdd(self, msg: str) -> None:

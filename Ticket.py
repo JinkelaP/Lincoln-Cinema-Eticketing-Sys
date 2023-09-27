@@ -52,5 +52,5 @@ class Ticket:
         return self.__valid
     
     @valid.setter
-    def validSet(self, status: bool) -> None:
+    def valid(self, status: bool) -> None:
         self.__valid = status

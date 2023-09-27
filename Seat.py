@@ -1,8 +1,8 @@
 class Seat:
-    def __init__(self, row: str, column: str, screeningID: int, available: bool = True) -> None:
+    def __init__(self, column: str, row: int, available: bool = True) -> None:
         self.__available = available
-        self.__seatID = f"{row}{column}"
-        self.__screeningID = screeningID
+        self.__seatID = f"{column}{row}"
+        self.__userID = None
 
     def __str__(self) -> str:
         return f'{self.__seatID} {str(self.__available)}'
@@ -17,10 +17,15 @@ class Seat:
         return self.__seatID
     
     @property
-    def screeningID(self) -> str:
-        return self.__screeningID
+    def userID(self) -> str:
+        return self.__userID
+
     
     @available.setter
-    def seated(self, availability: bool):
+    def available(self, availability: bool):
         self.__available = availability
+
+    @userID.setter
+    def userID(self, userID: int):
+        self.__userID = userID
     
