@@ -1,6 +1,6 @@
 
 class Seat:
-    """@class Seat"""
+    """! Seat"""
     """! @brief Represents a cinema seat with an ID, availability status, and an associated user if occupied."""
 
     

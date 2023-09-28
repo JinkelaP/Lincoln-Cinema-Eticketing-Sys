@@ -4,7 +4,7 @@ from Coupon import Coupon
 
 
 class User(ABC):
-    """@class User
+    """! User
 @brief This abstract class represents a user with a unique ID, username, and password. It also create a messege list."""
     
     nextID = 10
@@ -128,6 +128,12 @@ class Staff(User):
 
 class Admin(User):
     """!@class Staff
-@brief Represents a admin user, inheriting attributes and methods from the User class."""
+@brief Represents an admin user, inheriting attributes and methods from the User class."""
+    def __init__(self, name: str, psw: str) -> None:
+        super().__init__(name, psw)
+
+class System(User):
+    """!@class Staff
+@brief Represents a system user, inheriting attributes and methods from the User class."""
     def __init__(self, name: str, psw: str) -> None:
         super().__init__(name, psw)

@@ -2,7 +2,8 @@ from datetime import date
 
 
 class Coupon:
-    """!Represents a discount coupon with an associated user ID, expiration date, and discount value."""
+    """! Coupon Class
+    @brief Represents a discount coupon with an associated user ID, expiration date, and discount value."""
     
     nextID = 1000000
 

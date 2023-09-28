@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af741a255b40bb8c97eda2ca00682786f"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a movie, including screenings  <br /></td></tr>
 <tr class="separator:af741a255b40bb8c97eda2ca00682786f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab152c818eff2be175553cf57b61019a5" id="r_ab152c818eff2be175553cf57b61019a5"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#ab152c818eff2be175553cf57b61019a5">removeScreening</a> (self, <a class="el" href="class_screening_1_1_screening.html">Screening</a> screening)</td></tr>
-<tr class="memdesc:ab152c818eff2be175553cf57b61019a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a screening  <br /></td></tr>
+<tr class="memdesc:ab152c818eff2be175553cf57b61019a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a screening, including refund.  <br /></td></tr>
 <tr class="separator:ab152c818eff2be175553cf57b61019a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadde7a6b650a35e5bca524701179f714" id="r_aadde7a6b650a35e5bca524701179f714"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#aadde7a6b650a35e5bca524701179f714">removeTicket</a> (self, <a class="el" href="class_customer.html">Customer</a> user, <a class="el" href="class_ticket_1_1_ticket.html">Ticket</a> ticket)</td></tr>
 <tr class="memdesc:aadde7a6b650a35e5bca524701179f714"><td class="mdescLeft">&#160;</td><td class="mdescRight">deactivate a ticket  <br /></td></tr>
@@ -137,6 +137,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6451237682590bc229c8280aeece0982" id="r_a6451237682590bc229c8280aeece0982"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#a6451237682590bc229c8280aeece0982">searchMovieByStr</a> (self, str searching)</td></tr>
 <tr class="memdesc:a6451237682590bc229c8280aeece0982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle all search except date.  <br /></td></tr>
 <tr class="separator:a6451237682590bc229c8280aeece0982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa429396ff8692558a7fa7c1e4952d51" id="r_afa429396ff8692558a7fa7c1e4952d51"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#afa429396ff8692558a7fa7c1e4952d51">sendPublicMsg</a> (self, str msg)</td></tr>
+<tr class="memdesc:afa429396ff8692558a7fa7c1e4952d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a coupon is valid  <br /></td></tr>
+<tr class="separator:afa429396ff8692558a7fa7c1e4952d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -152,10 +155,14 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5b7c7c8e5df15f8027ae35b8d0c9cc47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7d7fb461eda1149798211c9c39baba" id="r_a3e7d7fb461eda1149798211c9c39baba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#a3e7d7fb461eda1149798211c9c39baba">allStaff</a></td></tr>
 <tr class="separator:a3e7d7fb461eda1149798211c9c39baba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64751137313082bd8c1229beb99815bb" id="r_a64751137313082bd8c1229beb99815bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#a64751137313082bd8c1229beb99815bb">allSys</a></td></tr>
+<tr class="separator:a64751137313082bd8c1229beb99815bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f13d457902faacfd1d209047d7287b9" id="r_a8f13d457902faacfd1d209047d7287b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#a8f13d457902faacfd1d209047d7287b9">loggedin</a></td></tr>
 <tr class="separator:a8f13d457902faacfd1d209047d7287b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30e5e1a46704f9eaf5b8378fb5cf93ce" id="r_a30e5e1a46704f9eaf5b8378fb5cf93ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#a30e5e1a46704f9eaf5b8378fb5cf93ce">loggedUser</a></td></tr>
 <tr class="separator:a30e5e1a46704f9eaf5b8378fb5cf93ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1b767e7ea586eb8eaa6d34f8daeab1" id="r_aee1b767e7ea586eb8eaa6d34f8daeab1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cinema_controller_1_1_cinema.html#aee1b767e7ea586eb8eaa6d34f8daeab1">publicMsg</a></td></tr>
+<tr class="separator:aee1b767e7ea586eb8eaa6d34f8daeab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The controller of the cinema management sys. </p>
@@ -694,7 +701,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>remove a screening </p>
+<p>remove a screening, including refund. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">screening</td><td>the screening </td></tr>
@@ -819,6 +826,42 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="afa429396ff8692558a7fa7c1e4952d51" name="afa429396ff8692558a7fa7c1e4952d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa429396ff8692558a7fa7c1e4952d51">&#9670;&#160;</a></span>sendPublicMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> str sendPublicMsg </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">str&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check if a coupon is valid </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msg</td><td>the message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad96b018fcc835772561493e1ae8929b0" name="ad96b018fcc835772561493e1ae8929b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad96b018fcc835772561493e1ae8929b0">&#9670;&#160;</a></span>allAdmin</h2>
@@ -904,6 +947,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a64751137313082bd8c1229beb99815bb" name="a64751137313082bd8c1229beb99815bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64751137313082bd8c1229beb99815bb">&#9670;&#160;</a></span>allSys</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">allSys</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8f13d457902faacfd1d209047d7287b9" name="a8f13d457902faacfd1d209047d7287b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f13d457902faacfd1d209047d7287b9">&#9670;&#160;</a></span>loggedin</h2>
 
@@ -926,6 +983,20 @@ Public Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">loggedUser</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee1b767e7ea586eb8eaa6d34f8daeab1" name="aee1b767e7ea586eb8eaa6d34f8daeab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee1b767e7ea586eb8eaa6d34f8daeab1">&#9670;&#160;</a></span>publicMsg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">publicMsg</td>
         </tr>
       </table>
 </div><div class="memdoc">

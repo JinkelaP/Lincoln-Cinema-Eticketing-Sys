@@ -8,5 +8,6 @@ var searchData=
   ['allmovie_5',['allMovie',['../class_cinema_controller_1_1_cinema.html#a7b82fadcafa779390f5e5d5b333b702a',1,'CinemaController::Cinema']]],
   ['allscreening_6',['allScreening',['../class_cinema_controller_1_1_cinema.html#a5b7c7c8e5df15f8027ae35b8d0c9cc47',1,'CinemaController::Cinema']]],
   ['allstaff_7',['allStaff',['../class_cinema_controller_1_1_cinema.html#a3e7d7fb461eda1149798211c9c39baba',1,'CinemaController::Cinema']]],
-  ['available_8',['available',['../class_seat_1_1_seat.html#ad0e70ceb7b071d731f83f83968744e85',1,'Seat.Seat.available(self)'],['../class_seat_1_1_seat.html#a235e984c0ce62be6cdfefffcbb9daf26',1,'Seat.Seat.available(self, bool availability)']]]
+  ['allsys_8',['allSys',['../class_cinema_controller_1_1_cinema.html#a64751137313082bd8c1229beb99815bb',1,'CinemaController::Cinema']]],
+  ['available_9',['available',['../class_seat_1_1_seat.html#ad0e70ceb7b071d731f83f83968744e85',1,'Seat.Seat.available(self)'],['../class_seat_1_1_seat.html#a235e984c0ce62be6cdfefffcbb9daf26',1,'Seat.Seat.available(self, bool availability)']]]
 ];

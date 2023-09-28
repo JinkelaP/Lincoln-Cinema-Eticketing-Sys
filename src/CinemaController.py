@@ -25,9 +25,11 @@ class Cinema:
         self.allCustomer = []
         self.allStaff = []
         self.allAdmin = []
+        self.allSys = []
         self.allHall = [Hall(1, 120), Hall(2, 90), Hall(3, 110), Hall(4, 80)]
         self.allMovie = []
         self.allScreening = []
+        self.publicMsg = []
         self.loggedin = None
         self.loggedUser = None
     def login(self, userName: str, psw: str, userType: int) -> str:
@@ -54,8 +56,17 @@ class Cinema:
                         return f'Welcome back, {i.username}!'
             else:
                 return msg
-        else:
+        elif userType == 1:
             for i in self.allAdmin:
+                if i.username == userName:
+                    if i.userPassword == psw:
+                        self.loggedin = 1
+                        self.loggedUser = i.userID
+                        return f'Welcome back, {i.username}!'
+            else:
+                return msg
+        elif userType == 0:
+            for i in self.allSys:
                 if i.username == userName:
                     if i.userPassword == psw:
                         self.loggedin = 1
@@ -227,13 +238,13 @@ class Cinema:
 
         for i in self.allScreening:
             if i.movieID == movieID:
-                msg = self.removeScreening(i)
+                self.removeScreening(i)
 
         return 'Movie removed. Screenings cancelled (if available).'
 
     
     def removeScreening(self, screening: Screening) -> str:
-        """! remove a screening
+        """! remove a screening, including refund.
     @param screening the screening"""
         for i in self.allScreening:
             if i == screening:
@@ -253,8 +264,14 @@ class Cinema:
     
     def isValidCoupon(coupon: Coupon) -> bool:
         """! check if a coupon is valid
-    @param coupon the coupon"""
+        @param coupon the coupon"""
         if coupon.valid != True or coupon.expireDate < datetime.now().date():
             return False
         else:
             return True
+        
+    def sendPublicMsg(self, msg: str) -> str:
+        """! check if a coupon is valid
+        @param msg the message"""
+        self.publicMsg.append([datetime.now(), msg])
+        return 'Public message sent!'

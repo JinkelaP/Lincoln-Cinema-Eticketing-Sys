@@ -8,6 +8,7 @@ var searchData=
   ['seat_5',['seat',['../class_seat_1_1_seat.html',1,'Seat'],['../namespace_seat.html',1,'Seat'],['../class_ticket_1_1_ticket.html#afef17253c3d17b6fdfb3696fd1259ab3',1,'Ticket.Ticket.seat()']]],
   ['seat_2epy_6',['Seat.py',['../_seat_8py.html',1,'']]],
   ['seatid_7',['seatID',['../class_seat_1_1_seat.html#ac2c18119d7c38f4e521208ff1898accc',1,'Seat::Seat']]],
-  ['staff_8',['Staff',['../class_staff.html',1,'']]],
-  ['sys_9',['Lincoln-Cinema-Eticketing-Sys',['../md__g_1_2_x_e6_x88_x91_x_e7_x9_a_x84_x_e4_x_b_a_x91_x_e7_x_a_b_x_a_f_x_e7_x_a1_x_a_c_x_e7_x9_b_xc94d014c5c3d36284c7b09ceb34d7675.html',1,'']]]
+  ['sendpublicmsg_8',['sendPublicMsg',['../class_cinema_controller_1_1_cinema.html#afa429396ff8692558a7fa7c1e4952d51',1,'CinemaController::Cinema']]],
+  ['staff_9',['Staff',['../class_staff.html',1,'']]],
+  ['sys_10',['Lincoln-Cinema-Eticketing-Sys',['../md__g_1_2_x_e6_x88_x91_x_e7_x9_a_x84_x_e4_x_b_a_x91_x_e7_x_a_b_x_a_f_x_e7_x_a1_x_a_c_x_e7_x9_b_xc94d014c5c3d36284c7b09ceb34d7675.html',1,'']]]
 ];
